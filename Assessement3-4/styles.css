@@ -153,10 +153,35 @@ Up to 900px */
         margin-right: 30px;
     }
     
-    nav{
-        margin-left: 30%;
-        width: 20%;
+   nav {
+       width: 100%;
+       box-sizing: border-box;
+       margin: 0 0 40px 0;
+       padding: 10px 5px;
+
+       position: relative;
+       float: none;
+
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       flex-wrap: wrap;
+
+       line-height: 30px;
+       
+       background: black;
+       border-bottom: 4px solid black;
+
+       z-index: 1000;
     }
+
+    nav a {
+        color: rgb(162, 0, 255);
+    }
+    nav a:hover {
+        color: darkgray;
+    }
+
 
     .books {
         grid-template-columns: repeat(2, 1 fr);
@@ -250,7 +275,7 @@ Up to 900px */
       footer {
         margin-top: 40px;
         font-size: 12px;
-        color: white;
+        color: yellowgreen;
       }
 
 }
