@@ -57,9 +57,25 @@
                    </a>
                 </div>
                 <div class="menu1">
-                   <a href="stories.html" class="menu1">STORIES</a>
-                   <a href="#" class="menu1">SERIES</a>
-                   <a href="index.html" class="menu1">ABOUT</a>
+
+                    <!-- The X button closes the mobile navigation -->
+                     <button type="button" class="close-menu"
+                     aria-label="Close navigation Menu">&times;</button>
+
+
+                   <a href="stories.html" class="menuI">STORIES</a>
+                   <a href="#" class="menuI">SERIES</a>
+                   <a href="index.html" class="menuI">ABOUT</a>
+                </div>
+
+                <!--Hamburger button: displayed on mobile and tablet screens -->
+                <div class="hamburger-menu">
+                    <button type="button" arial-label="Open Navigation Menu">
+                        <!-- Font Awesome displays the three horizontal menu lines-->
+                         <span class="fa fa-bars" aria-hidden="true">
+
+                         </span>
+                    </button>
                 </div>
             </nav>
         </header>
@@ -225,7 +241,7 @@
                 </a>
 
                    <a href="https://Tiktok.com"
-                   class="social Tiktok"
+                   class="social tiktok"
                    aria-label="Tiktok">
                    <i class="fa-brands fa-tiktok"></i>           
                 </a>
@@ -258,6 +274,36 @@
         </footer>
 
     </div>
+
+    <!-- Javascript:
+    Makes the mobile hamburger menu open and close.
+    JS adds or removes a CSS class.
+    The CSS decides what the menu looks like when that class is present. -->
+
+    <script>
+        // Wait until the HTML document has finished loading.
+        // This ensures the buttons exist before JS tries to select them.
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Find the hamburger button inside the mobile menu container.
+            const hamburgerButton = document.querySelector('hamburger-menu button');
+
+            // Find the X button used to close the navigation menu
+            const closeButton = document.querySelector('.close-menu');
+
+            // Find the container holding the navigation links
+            const menu1 = document.querySelector('.menu1');
+
+            // when the hamburger button is clicked, add the class "menu-deployed" to the navigation menu.
+            // Then CSS uses this class to make the menu visible.
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+            // When the X button is clicked, remove "menu-deployed" so that the menu closes.
+            closeButton.addEventListener('click', () => {menu1.classList.remove('menu-deployed')});
+        })
+    </script>
     
 </body>
 </html>
