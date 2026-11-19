@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+.icons {
+    display: flex;
+    gap: 40px;
+}
+
+.icons img {
+    width: 1000px;
+}
+
+a {
+    display: block;
+    line-height: 0;
+}
+
+.eye {
+    cursor: pointer;
+}
